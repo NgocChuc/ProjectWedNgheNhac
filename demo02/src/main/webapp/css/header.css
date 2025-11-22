@@ -1,0 +1,326 @@
+/* CSS CỦA BẠN ĐÃ GỬI */
+body {
+	font-family: "Nunito", sans-serif;
+	background-color: #000000;
+}
+
+.headerA {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #000000;
+	/* Đã thay đổi grid-template-columns để thêm cột cho logo và căn chỉnh lại các phần khác */
+	grid-template-columns: 100px 100px 1fr 1fr 1fr 1fr 1fr 1fr;
+	/* Điều chỉnh cột đầu tiên cho logo */
+	display: grid;
+	align-items: center;
+	padding: 0 20px;
+	z-index: 1000;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* --- CSS MỚI CHO LOGO --- */
+.headerA-left-logo {
+	grid-column: 1/span 1; /* Đặt logo vào cột đầu tiên */
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.logo-link {
+	height: 40px; /* Chiều cao của logo container */
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+.site-logo {
+	height: 40px; /* Kích thước logo */
+	width: auto;
+	object-fit: contain;
+}
+/* ------------------------- */
+.headerA-center {
+	/* Đã điều chỉnh lại vị trí grid-column cho phần trung tâm */
+	grid-column: 3/span 4;
+	/* Vị trí của các nút mũi tên và thanh tìm kiếm */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.headerA-center-arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.arrow-backHA_btn, .arrow-forwardHA_btn {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+	transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.arrow-backHA_btn:hover, .arrow-forwardHA_btn:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+	transform: scale(1.05);
+}
+
+.arrow-backHA_btn:active, .arrow-forwardHA_btn:active {
+	transform: scale(0.9);
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Đã loại bỏ .headerA-center-home và các CSS liên quan */
+.search-headerA {
+	display: flex;
+	align-items: center;
+	background-color: #2a2a2a;
+	border-radius: 25px;
+	margin: 5px 0;
+	padding: 0 12px;
+	height: 50px;
+	width: 400px;
+	transition: all 0.3s ease;
+}
+
+.search-headerA:hover {
+	background-color: #3a3a3a;
+}
+.search-headerA:focus-within {
+    background-color: #3a3a3a; /* Giữ màu nền hover hoặc làm sáng hơn */
+    
+    /* Hiệu ứng viền sáng/Box Shadow */
+    box-shadow: 0 0 0 2px #D4EBF8; /* Màu xanh lá cây/xanh ngọc nổi bật */
+    /* Hoặc chỉ đơn giản là thay đổi border nếu bạn có border */
+    /* border: 2px solid #1DB954; */ 
+    
+    /* Nếu bạn muốn loại bỏ hover khi focus, đảm bảo quy tắc focus-within nằm sau quy tắc hover */
+}
+
+/* Tùy chọn: Thay đổi màu chữ placeholder khi focus */
+.input-search-header:focus::placeholder {
+    color: #cccccc; 
+}
+.input-search-header {
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #efefef;
+	font-size: 14px;
+	width: 100%;
+	margin-left: 8px;
+	font-family: "Nunito", sans-serif;
+}
+
+.input-search-header::placeholder {
+	color: #aaaaaa;
+}
+
+.input-sreach-headerA_btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	transition: transform 0.2s ease;
+}
+
+.headerA-right {
+	grid-column: 8; /* Giữ nguyên vị trí ở cột cuối */
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.headerA-right-notifications {
+	grid-column: 7; /* Đặt thông báo vào cột trước cột cuối */
+}
+
+.headerA-right-button-notifications {
+	background: transparent;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 40px;
+	transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.bell-noti {
+	width: 18px;
+}
+
+.bell-noti path {
+	fill: white;
+}
+
+.headerA-right-button-notifications:hover {
+	background-color: rgb(56, 56, 56);
+}
+
+@keyframes bellRing {
+    0%, 100% { transform-origin: top; }
+    15% { transform: rotateZ(10deg); }
+    30% { transform: rotateZ(-10deg); }
+    45% { transform: rotateZ(5deg); }
+    60% { transform: rotateZ(-5deg); }
+    75% { transform: rotateZ(2deg); }
+}
+
+.headerA-right-button-notifications:hover .bell-noti {
+	animation: bellRing 0.9s both;
+}
+
+.headerA-right-button-notifications:active {
+	transform: scale(0.8);
+}
+/* Viền sáng khi nút thông báo được focus */
+.headerA-right-button-notifications:focus {
+    /* Đảm bảo transform không bị ảnh hưởng khi focus */
+    transform: none; 
+    box-shadow: 0 0 0 2px #D4EBF8; 
+}/* Quy tắc :hover và :active (từ code cũ) vẫn giữ nguyên */
+
+/* CSS cho container chứa nút và bảng thông báo */
+.headerA-right-notifications {
+    position: relative; /* Rất quan trọng: làm điểm neo cho dropdown */
+    /* ... (giữ nguyên các thuộc tính hiển thị cũ) ... */
+}
+
+/*bảng thông báo (Dropdown) */
+.notifications-dropdown {
+    position: absolute;
+    top: 55px; 
+    right: 0; 
+    width: 300px;
+    background-color: #3a3a3a; 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 2000; 
+    padding: 15px;
+    /* Mặc định ẩn đi */
+    display: none; 
+    /* Hiệu ứng chuyển động */
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: translateY(-10px);
+}
+/* Class được thêm bằng JS khi thông báo hiện ra */
+.notifications-dropdown.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notifications-header {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #4a4a4a; /* Đường phân cách */
+}
+
+.notifications-title {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+.notifications-content {
+    /* Đảm bảo nội dung không tràn ra ngoài */
+    max-height: 400px; /* Giới hạn chiều cao */
+    overflow-y: auto; /* Thêm scrollbar nếu quá dài */
+}
+
+.notifications-empty-message {
+    color: #aaaaaa;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.notifications-empty-message strong {
+    color: #1DB954; /* Làm nổi bật từ "Theo dõi" */
+    font-weight: 600;
+}
+
+.header-right-icon.avatar {
+    position: relative; /* Rất quan trọng: làm điểm neo cho dropdown */
+    z-index: 1100; /* Đảm bảo nút và dropdown luôn ở trên */
+}
+
+/* ------------------------------------------- */
+/* CSS cho Bảng Dropdown Menu */
+/* ------------------------------------------- */
+.user-dropdown-menu {
+    position: absolute;
+    top: 55px; /* Đặt dưới header */
+    right: 0; 
+    width: 180px; /* Chiều rộng bảng */
+    background-color: #3a3a3a; /* Nền tối */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    padding: 8px 0;
+    
+    /* Mặc định ẩn đi */
+    display: none; 
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: translateY(-10px);
+}
+
+/* Class được thêm bằng JS khi menu hiện ra */
+.user-dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CSS cho danh sách và các mục */
+.user-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-menu-item {
+    padding: 0;
+}
+
+.menu-link {
+    display: block;
+    padding: 8px 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.menu-link:hover {
+    background-color: #4a4a4a; /* Màu nền khi hover */
+}
+
+/* Đường phân cách */
+.user-menu-item.divider {
+    height: 1px;
+    margin: 5px 0;
+    background-color: #555555;
+    padding: 0;
+}

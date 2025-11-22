@@ -1,0 +1,219 @@
+/* MUSIC PLAYER CONTAINER */
+.music-player-container {
+    left: 0;
+    bottom: 0;
+    background-color: #000000;
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+}
+
+/* Phần 1: Song Info */
+.song-info-music-player {
+    /* flex mặc định, phần tử con đầu tiên xuất hiện trong html sẽ đứng trước bên trái  */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 0 0 250px; /* không co gian dù thay đổi kí*/
+}
+
+.song-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    overflow: hidden; /* để hình ảnh không tràn ra ngoài viền bo */
+    flex-shrink: 0;
+}
+
+.song-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*co giãn để lấp đầy khung chứa (container) của nó — mà vẫn giữ nguyên tỉ lệ gốc*/
+}
+
+.song-infor-mp {
+    flex: 1;
+    min-width: 0;
+}
+
+.song-title-mp {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-artist-mp {
+    color: #b3b3b3;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.verified-icon {
+    color: #1ed760;
+    font-size: 14px;
+}
+
+/* Icon Tim */
+.favorite-icon-mp {
+    color: #b3b3b3;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.favorite-icon-mp:hover {
+    color: #da5899;
+}
+
+.favorite-icon-mp.active {
+    color: #d71e6e;
+}
+
+/* Phần 2: Control Bar */
+.control-bar-mp {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /*qui định xếp theo cột*/
+    gap: 8px;
+    max-width: 722px;
+    margin: 0 auto;
+}
+
+/* Controls */
+.controls-mp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    color: #fff;
+}
+
+.control-btn.active {
+    color: #1ed760;
+}
+
+.play-btn {
+    background: none;
+    color: #000;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-btn:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+    color: #000;
+}
+
+.material-symbols-outlined {
+    font-size: 24px;
+}
+
+.play-btn .material-symbols-outlined {
+    font-size: 28px;
+}
+
+/* Progress Bar */
+.progress-container-mp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.time-mp {
+    color: #b3b3b3;
+    font-size: 11px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.progress-bar {
+    flex: 0.7;
+    height: 3px;
+
+    background-color: #4d4d4d;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+}
+
+.progress-bar:hover .progress-fill::after {
+    opacity: 1;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #b3b3b3;
+    border-radius: 2px;
+    position: relative;
+    width: 20%;
+    transition: background-color 0.2s;
+}
+
+.progress-bar:hover .progress-fill {
+    background-color: #1ed760;
+}
+
+.progress-fill::after {
+    content: "";
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.extra-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 5%;
+}
+
+@media (max-width: 768px) {
+    .music-player {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .song-info {
+        flex: none;
+        width: 100%;
+    }
+}
