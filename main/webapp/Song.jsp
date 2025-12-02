@@ -1,45 +1,52 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Music Player</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f5f5f5; }
-        .song { border: 1px solid #ddd; padding: 15px; margin: 10px 0; background: #fff; display: flex; }
-        .cover { width: 100px; height: 100px; margin-right: 15px; }
-        .details { flex: 1; }
-        .lyrics { margin-top: 10px; font-size: 0.9em; color: #555; }
-        audio { width: 100%; margin-top: 10px; }
-    </style>
+    <meta charset="UTF-8">
+    <title>Danh sách bài hát</title>
 </head>
 <body>
-    <h1>Danh sách bài hát</h1>
 
-    <c:forEach var="song" items="${songs}">
-        <div class="song">
-            <!-- Ảnh cover -->
-            <div class="cover">
-                <img src="${pageContext.request.contextPath}/${song.coverImage}" alt="${song.title}" width="100" height="100"/>
-            </div>
+<h2>Danh sách bài hát</h2>
 
-            <!-- Thông tin và audio player -->
-            <div class="details">
-                <h3>${song.title} - ${song.artist}</h3>
-                <p>Thể loại: ${song.genre}</p>
+<c:if test="${empty songs}">
+    <p>Không có bài hát nào.</p>
+</c:if>
 
-                <!-- Audio player -->
-                <audio controls>
-                    <source src="${pageContext.request.contextPath}/${song.filename}" type="audio/mpeg">
-                    Trình duyệt của bạn không hỗ trợ audio.
-                </audio>
+<c:if test="${not empty songs}">
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Tiêu đề</th>
+            <th>Nghệ sĩ</th>
+            <th>Thể loại</th>
+            <th>Lượt xem</th>
+            <th>Ảnh bìa</th>
+            <th>Nghe</th>
+        </tr>
 
-                <!-- Lyrics -->
-                <div class="lyrics">
-                    <strong>Lời bài hát:</strong><br/>
-                    ${song.lyrics}
-                </div>
-            </div>
-        </div>
-    </c:forEach>
+        <c:forEach var="s" items="${songs}">
+            <tr>
+                <td>${s.id}</td>
+                <td>${s.title}</td>
+                <td>${s.artist}</td>
+                <td>${s.genre}</td>
+
+                <td>
+                    <img src="${pageContext.request.contextPath}/${s.coverImage}" width="80">
+                </td>
+
+                <td>
+                    <audio controls>
+                        <source src="${pageContext.request.contextPath}/${s.filename}" type="audio/mpeg">
+                    </audio>
+                </td>
+            </tr>
+        </c:forEach>
+    </table>
+</c:if>
+
 </body>
 </html>
