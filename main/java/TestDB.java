@@ -3,11 +3,12 @@ import Model_Layer.DBUtil;
 
 public class TestDB {
 	public static void main(String[] args) {
-        Connection conn = DBUtil.getConnection();
-        if (conn != null) {
-            System.out.println("✅ Kết nối CSDL thành công!");
-        } else {
-            System.out.println("❌ Kết nối thất bại!");
+		try (Connection conn = DBUtil.getConnection()) { // try-with-resources tự đóng connection
+            System.out.println("Connected via pool: " + (conn != null));
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            DBUtil.closePool(); // Đóng pool khi không dùng nữa
         }
     }
 
