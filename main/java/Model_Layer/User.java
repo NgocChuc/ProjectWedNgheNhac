@@ -4,7 +4,9 @@ public class User {
 	private int id;
 	private String userName;
 	private String password;
+	private String email;
 	private String role;
+	private String avatarUrl;
 	
 	public User() {	}
 	
@@ -14,6 +16,20 @@ public class User {
 		this.userName = userName;
 		this.password = password;
 		this.role = role;
+	}
+	
+	// Constructor 3 tham số: Dùng khi khởi tạo từ UserDao
+	public User(int id, String username, String role) {
+		this.id = id;
+		this.userName = username;
+		this.role = role;
+		this.avatarUrl = null; // Khởi tạo avatarUrl là null
+	}
+	
+	public User(String userName, String email, String password) {
+		this.userName = userName;
+		this.email = email;
+		this.password = password;
 	}
 
 	public int getId() {
@@ -48,6 +64,20 @@ public class User {
 		this.role = role;
 	}
 	
+	public String getAvatarUrl() {
+		return avatarUrl;
+	}
 	
+	public void setAvatarUrl(String avatarUrl) {
+		this.avatarUrl = avatarUrl;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 }
