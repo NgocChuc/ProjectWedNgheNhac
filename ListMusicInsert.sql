@@ -1,10 +1,10 @@
-﻿USE MusicDB;
+USE MusicDB;
 GO
 
 INSERT INTO Songs(title, artist, genre, filename, lyrics, cover_image, views)
 VALUES 
 
-(N'After Hours', N'The Weeknd', N'Pop', 'music/After Hours.mp3', 
+(N'After Hours', N'The Weeknd', N'Pop', 'music/After_Hours.mp3', 
 	N'Take off my disguise I''m living someone else''s life', N'image/AfterHours.webp', 0),
 
 
@@ -76,7 +76,7 @@ VALUES
 	Jurassic World', N'image/an.jpg', 0),
 
 
-(N'Bài Thuốc Dong Y', N'LAMOON', N'Pop', 'music/Bài Thuốc Dong Y.mp3', 
+(N'Bài Thuốc Dong Y', N'LAMOON', N'Pop', 'music/Bai_Thuoc_Dong_Y.mp3', 
 	N'24/24 think about you
 	Love you more than anything
 	It''s my attitude
@@ -195,7 +195,7 @@ VALUES
 	Nay you đồng ý', N'image/lamoon.jpg', 0),
 
 
-(N'Bản Thiết Kế', N'MOPIUS, Quang Hùng MasterD, Dương Domic & HURRYKNG', N'Pop', 'music/Bản Thiết Kế.mp3',
+(N'Bản Thiết Kế', N'MOPIUS, Quang Hùng MasterD, Dương Domic & HURRYKNG', N'Pop', 'music/Ban_Thiet_.mp3',
 	N'Khi em đang vùi mình trong gối
 	Khi cơn mưa còn vẫn chưa ngơi
 	Em mang theo một màu u tối
@@ -252,7 +252,7 @@ VALUES
 	', N'image/banthietke.jpg', 0),
 
 
-(N'BẮC THANG LÊN HỎI ÔNG TRỜI', N'Bích Phương, Juky San, LAMOON, Mỹ Mỹ & Quỳnh Anh Shyn', N'Pop', 'music/BẮC THANG LÊN HỎI ÔNG TRỜI.mp3', 
+(N'BẮC THANG LÊN HỎI ÔNG TRỜI', N'Bích Phương, Juky San, LAMOON, Mỹ Mỹ & Quỳnh Anh Shyn', N'Pop', 'music/Bac_Thang_Len_Hoi_Ong_Troi.mp3', 
 	N'Vầng trăng treo trên núi nghiêng nghiêng
 	Em tựa vai anh
 	Trăng đắm chìm trong mây
@@ -310,10 +310,10 @@ VALUES
 	Cho tình đôi ta sẽ thành', N'image/BTLHOT.jpg', 0),
 
 
-(N'Can You Hold Me Bae?  (interlude)', N'LAMOON', N'Pop', 'music/Can You Hold Me Bae_ (interlude).mp3', N'Lời bài hát sẽ sớm được cập nhật...', N'image/lamoon.jpg', 0),
+(N'Can You Hold Me Bae?  (interlude)', N'LAMOON', N'Pop', 'music/Can_You_Hold_Me Bae.mp3', N'Lời bài hát sẽ sớm được cập nhật...', N'image/lamoon.jpg', 0),
 
 
-(N'chẳng phải tình đầu sao đau đến thế', N'MIN, Dangrangto & antransax', N'Pop', 'music/chẳng phải tình đầu sao đau đến thế.mp3', 
+(N'chẳng phải tình đầu sao đau đến thế', N'MIN, Dangrangto & antransax', N'Pop', 'music/Chang_Phai_Tinh_Dau_Sao_Lai_Dau_Den_The.mp3', 
 	N'Chẳng phải tình đầu sao đau đến thế
 	Tại sao vẫn yêu si mê
 	Tại sao trái tim vẫn ngô nghê
@@ -402,7 +402,7 @@ VALUES
 	Cám ơn vì đã dám buông tay
 	Không níu giữ giấc mộng này
 	Tình đầu lúc không thành
-	Có đau như vậy', N'image/chẳng phải tình đầu sao đau đến thế.jpg', 0),
+	Có đau như vậy', N'image/CPTDSLDDT.jpg', 0),
 
 
 (N'Dive', N'LAMOON', N'Pop', 'music/Dive.mp3', 
@@ -457,7 +457,7 @@ VALUES
 	Dive into my - to - my - my soul', N'image/lamoon.jpg', 0),
 
 
-(N'Em Còn Nhớ Hay Em Đã Quên', N'Lân Nhã', N'Pop', 'music/Em Còn Nhớ Hay Em Đã Quên.mp3', 
+(N'Em Còn Nhớ Hay Em Đã Quên', N'Lân Nhã', N'Pop', 'music/Em_Con_Nho_Hay_Da_Quen.mp3', 
 	N'Em còn nhớ hay em đã quên
 	Nhớ Sài Gòn mưa rồi chợt nắng
 	Nhớ phố xưa quen biết tên bàn chân
@@ -496,7 +496,7 @@ VALUES
 	Em còn nhớ hay em đã quên', N'image/EmConNhoHayDaQuen.jpg', 0),
 
 
-(N'Giờ Thì', N'buitruonglinh', N'Pop', 'music/Giờ Thì.mp3', 
+(N'Giờ Thì', N'buitruonglinh', N'Pop', 'music/Gio_Thi.mp3', 
 	N'Mỉm cười mỗi lúc
 	Thấy tiếng nói em ngay bên cạnh
 	Giữa tiếng pháo đón mưa đêm thêm lạnh
@@ -566,7 +566,7 @@ VALUES
 	Chỉ là chúng ta chọn rời xa', N'image/GT.jpg', 0),
 
 
-(N'Go To The Field', N'Aharon Razel', N'Vprod Music', 'music/Go To The Field.mp3', N'Lời bài hát sẽ sớm được cập nhật...', N'image/GoToTheField.jpg', 0),
+(N'Go To The Field', N'Aharon Razel', N'Vprod Music', 'music/Go_To_The_Field.mp3', N'Lời bài hát sẽ sớm được cập nhật...', N'image/GoToTheField.jpg', 0),
 
 
 (N'Golden', N'HUNTR/X, EJAE, AUDREY NUNA, REI AMI & KPop Demon Hunters Cast', N'K-Pop', 'music/Golden.mp3', 
@@ -623,7 +623,7 @@ VALUES
 	That''s who we''re born to be', N'image/Golden.jpg', 0),
 
 
-(N'HOP ON DA SHOW', N'tlinh & Low G', N'Hip-Hop/Rap', 'music/HOP ON DA SHOW.mp3', 
+(N'HOP ON DA SHOW', N'tlinh & Low G', N'Hip-Hop/Rap', 'music/HOP_ON_DA_SHOW.mp3', 
 	N'And it''s cold in the sizzurp
 	Gold in the mold with them
 	Hoes like the lizards
@@ -707,10 +707,10 @@ VALUES
 	Bọn tao flavor ***', N'image/HONDS.jpg', 0),
 
 
-(N'Hot Skin', N'Sam Feldt & Kav Verhouzer', N'Dance', 'music/Hot Skin.mp3', N'Lời bài hát sẽ sớm được cập nhật...', N'image/HotSkin.jpg', 0),
+(N'Hot Skin', N'Sam Feldt & Kav Verhouzer', N'Dance', 'music/Hot_Skin.mp3', N'Lời bài hát sẽ sớm được cập nhật...', N'image/HotSkin.jpg', 0),
 
 
-(N'HOẠT CẢNH TẾT ''GÒY'' CƯỚI LUÔNG ', N'Tóc Tiên, misthy, Bùi Lan Hương, Minh Hằng, Phạm Quỳnh Anh & Dương Hoàng Yến', N'Pop', 'music/HOẠT CẢNH TẾT _GÒY_ CƯỚI _LUÔNG_.mp3', 
+(N'HOẠT CẢNH TẾT ''GÒY'' CƯỚI LUÔNG ', N'Tóc Tiên, misthy, Bùi Lan Hương, Minh Hằng, Phạm Quỳnh Anh & Dương Hoàng Yến', N'Pop', 'music/Hoat_Canh_Tet_GOY_CUOI_LUONG.mp3', 
 	N'Hò ơ gái trăm rằm
 	Gái ngồi chỏng chơ
 	Con trai mười tám
@@ -803,7 +803,7 @@ VALUES
 	Hai đứa về bên nhau', N'image/goy.jpg', 0),
 
 
-(N'HỀ', N'Phương Mỹ Chi, Phương Ly, Pháo, Chi Xê & WEAN', N'Pop', 'music/HỀ.mp3', 
+(N'HỀ', N'Phương Mỹ Chi, Phương Ly, Pháo, Chi Xê & WEAN', N'Pop', 'music/HE.mp3', 
 	N'Tiếng vỗ tay đang dần tan đi
 	Đọng lại trong tâm trí em
 	Câu nói anh không hề giấu
@@ -969,7 +969,7 @@ VALUES
 	Ttwieo', N'image/jump.jpg', 0),
 
 
-(N'Khóa Ly Biệt', 'The Masked Singer, Voi Bản Đôn', N'Pop', 'music/Khóa Ly Biệt.mp3', 
+(N'Khóa Ly Biệt', 'The Masked Singer, Voi Bản Đôn', N'Pop', 'music/khoa_Biet_Ly.mp3', 
 	N'Hỡi cơn mưa bao đêm không ngủ
 	Liệu rằng xa cách bao lâu thì tình sẽ cũ?
 	Hỡi cơn mưa bao đêm không tạnh
@@ -1015,7 +1015,7 @@ VALUES
 	Khóa duyên mình khỏi kẻ lạ để người ngủ yên.', N'image/Khoalybiet.jpg', 0),
 
 
-(N'Không Buông', N'Hngle & Ari', N'R&B/Soul', 'music/Không Buông.mp3', 
+(N'Không Buông', N'Hngle & Ari', N'R&B/Soul', 'music/Khong_Buon.mp3', 
 	N'Anh nhớ từng phút
 	Yên bình tay nắm tay
 	Nhớ khoảnh khắc đôi mình
@@ -1087,7 +1087,7 @@ VALUES
 	Đến lúc ta phải chia xa', N'image/KhongBuong.jpg', 0),
 
 
-(N'Không Một Lời Nào', N'LAMOON', N'Pop', 'music/Không Một Lời Nào.mp3', 
+(N'Không Một Lời Nào', N'LAMOON', N'Pop', 'music/Khong_Mot_Loi_Nao.mp3', 
 	N'VERSE:
 	Mỗi một giây, người ở cạnh đây
 	Em thấy ấm áp vô cùng
@@ -1127,7 +1127,7 @@ VALUES
 	(Hôn em)', N'image/lamoon.jpg', 0),
 
 
-(N'KHÔNG ĐAU NỮA RỒI', N'Anh Tú, LyLy, 52Hz & Orange', N'Pop', 'music/KHÔNG ĐAU NỮA RỒI.mp3', 
+(N'KHÔNG ĐAU NỮA RỒI', N'Anh Tú, LyLy, 52Hz & Orange', N'Pop', 'music/Khong_Dau_Nua_Roi.mp3', 
 	N'Em chẳng biết vì sao lại như vậy
 	Em đã nghĩ mình khóc được rồi đấy
 	Nhưng em còn chưa định hình
@@ -1305,7 +1305,7 @@ VALUES
 	I be like Lalalala (Huh) Can you hold me, bae?', N'image/lamoon.jpg', 0),
 
 
-(N'Like Jennie', N'JENNIE', N'Pop', 'music/Like Jennie.mp3', 
+(N'Like Jennie', N'JENNIE', N'Pop', 'music/Like_Jennie.mp3', 
 	N'Hah, c''mon, it''s gonna be * hard
 	Special edition, and your AI couldn''t copy
 	I''m leaving clues in the fittin'' room, and it''s hot tea
@@ -1356,7 +1356,7 @@ VALUES
 	It''s JENNIE, JENNIE, JENNIE, JENNIE', N'image/LikeJennie.jpg', 0),
 
 
-(N'Look What You Made Me Do', N'Taylor Swift', N'Pop', 'music/Look What You Made Me Do.mp3', 
+(N'Look What You Made Me Do', N'Taylor Swift', N'Pop', 'music/Look_What_You_Made_Me_Do.mp3', 
 	N'I don''t like your little games
 	Don''t like your tilted stage
 	The role you made me play of the fool
@@ -1428,7 +1428,7 @@ VALUES
 	Look what you just made me do', N'image/LWYMMD.jpg', 0),
 
 
-(N'Love Hangover', N'JENNIE, Dominic Fike', N'Disco', 'music/Love Hangover.mp3', 
+(N'Love Hangover', N'JENNIE, Dominic Fike', N'Disco', 'music/Love_Hangover.mp3', 
 	N'I''m over I''m so over
 	This love hangover
 	Fight me fight me fight me
@@ -1516,7 +1516,7 @@ VALUES
 	Back back ba-ba-back', N'image/LoveHangover.jpg', 0),
 
 
-(N'Love Story', N'Taylor Swift', N'Country', 'music/Love Story.mp3', 
+(N'Love Story', N'Taylor Swift', N'Country', 'music/Love_Story.mp3', 
 	N'Song: Love Story
 	Singer: Taylor Swift
 	We were both young when I first saw you
@@ -1570,7 +1570,7 @@ VALUES
 	Because we were both young when I first saw you', N'image/LS.jpg', 0),
 
 
-(N'Lễ Đường', N'Kai Đinh', N'Pop', 'music/Lễ Đường.mp3', 
+(N'Lễ Đường', N'Kai Đinh', N'Pop', 'music/Le_Duong.mp3', 
 	N'Người là nắng thiếu thời
 	Cướp đi hồn anh
 	Bằng một thoáng môi cười
@@ -1626,7 +1626,7 @@ VALUES
 	Mình già đi cùng nhau có nhau', N'image/LeDuong.jpg', 0),
 
 
-(N'MAKE UP', N'ANH TRAI "SAY HI", Dillan Hoàng Phan, buitruonglinh và nhiều hơn', N'Pop', 'music/MAKE UP.mp3', 
+(N'MAKE UP', N'ANH TRAI "SAY HI", Dillan Hoàng Phan, buitruonglinh và nhiều hơn', N'Pop', 'music/MAKE_UP.mp3', 
 	N'Em biến mất chẳng nói một lời
 	Căn phòng sao chơi vơi giá rét khắp nơi
 	Bốn bức tường toàn là hình cả hai
@@ -1728,7 +1728,7 @@ VALUES
 	Don''t mess up your make up', N'image/MK.jpg', 0),
 
 
-(N'May Mắn', N'Chị Đẹp Đạp Gió Rẽ Sóng, Bùi Lan Hương, Ái Phương', N'R&B/Soul', 'music/May Mắn.mp3', 
+(N'May Mắn', N'Chị Đẹp Đạp Gió Rẽ Sóng, Bùi Lan Hương, Ái Phương', N'R&B/Soul', 'music/May_Man.mp3', 
 	N'Được ở bên em là may mắn
 	Chỉ muốn bên em thôi mà
 	Chạm khẽ đôi môi em
@@ -1800,7 +1800,7 @@ VALUES
 	Được ở bên em là may mắn', N'image/MM.jpg', 0),
 
 
-(N'Một Mình', N'Lý Anh Khoa, LAMOON', N'Pop', 'music/Một Mình.mp3', 
+(N'Một Mình', N'Lý Anh Khoa, LAMOON', N'Pop', 'music/Mot_Minh.mp3', 
 	N'Ăn cơm một mình
 	Đi xe một mình
 	Ngủ cũng một mình
@@ -1870,7 +1870,7 @@ VALUES
 	Vì đoạn thời gian mình từng vui', N'image/lamoon.jpg', 0),
 
 
-(N'Người Đầu Tiên', N'Juky San & buitruonglinh', N'Pop', 'music/Người Đầu Tiên.mp3', 
+(N'Người Đầu Tiên', N'Juky San & buitruonglinh', N'Pop', 'music/Nguoi_Dau_Tien.mp3', 
 	N'Là người đầu tiên cầm tay
 	Là người đầu tiên ôm em
 	Dưới bầu trời này
@@ -1947,7 +1947,7 @@ VALUES
 	Em dâng cả cuộc đời', N'image/NguoiDauTien.jpg', 0),
 
 
-(N'Notice Me', N'LAMOON', N'Pop', 'music/Notice Me.mp3', 
+(N'Notice Me', N'LAMOON', N'Pop', 'music/Notice_Me.mp3', 
 	N'Sáng trời trong đẹp tựa gói quà
 	Sẽ đem giữ chuyện tình đôi ta
 	Những hoài mong cũng chỉ có vậy
@@ -1988,7 +1988,7 @@ VALUES
 	Notice Notice Notice me', N'image/lamoon.jpg', 0),
 
 
-(N'Nắng Dưới Chân Mây (Hchun Remix)', N'Nguyễn Hữu Kha', N'Electronic', 'music/Nắng Dưới Chân Mây (Hchun Remix).mp3', 
+(N'Nắng Dưới Chân Mây (Hchun Remix)', N'Nguyễn Hữu Kha', N'Electronic', 'music/Nang_Duoi_Chan_May.mp3', 
 	N'Tình yêu anh như nắng đợi tìm về nhau giữa chân mây
 	Dặn lòng không thể lấp đầy em đi vội chẳng giữ lấy
 	Phải chi anh là kẻ tồi, rời bỏ đi lúc yêu thôi
@@ -2033,7 +2033,7 @@ VALUES
 	Cả giây phút thiêng liêng bên hiên ôm nắng chiều khẽ rơi.', N'image/NDCM.jpg', 0),
 
 
-(N'Nụ Hôn Dài Thoòng Loòng', N'LAMOON', N'Pop', 'music/Nụ Hôn Dài Thoòng Loòng.mp3', 
+(N'Nụ Hôn Dài Thoòng Loòng', N'LAMOON', N'Pop', 'music/Nu_Hon_Dai_Thong_Loong.mp3', 
 	N'Dường như chẳng còn
 	Thiết đêm hay ngày
 	Động cơ chạy lôi cuốn
@@ -2096,7 +2096,7 @@ VALUES
 	The longest kiss', N'image/lamoon.jpg', 0),
 
 
-(N'Only You', N'Yebit', N'indie pop/ballad', 'music/Only You.mp3', 
+(N'Only You', N'Yebit', N'indie pop/ballad', 'music/Only_You.mp3', 
 	N'눈을 감고 있으면 니 얼굴이 떠올라
 	노랠 듣고 있어도 니 목소리가 들려
 	내가 좋아하던 노래 밤새 연습 했었다며
@@ -2126,7 +2126,7 @@ VALUES
 	기댈 곳은 너밖에 없어', N'image/OnlyYou.jpg', 0),
 
 
-(N'PHONG NỮ - CÔ ĐÔI THƯỢNG NGÀN', N'Kiều Anh', N'Pop', 'music/PHONG NỮ - CÔ ĐÔI THƯỢNG NGÀN.mp3', 
+(N'PHONG NỮ - CÔ ĐÔI THƯỢNG NGÀN', N'Kiều Anh', N'Pop', 'music/Phong_Nu_Co_Doi_Thuong_Ngan.mp3', 
 	N'Ngọc điện chốn kim môn cô ra vào
 	Ngọc điện chốn kim môn
 	Danh thơm ngoài cõi tiếng đồn
@@ -2177,7 +2177,7 @@ VALUES
 	Xe loan thánh giá hồi cung', N'image/PN.jpg', 0),
 
 
-(N'Sao Hạng A', N'HIEUTHUHAI, Dương Domic, Song Luân & JSOL', N'Pop', 'music/Sao Hạng A.mp3', 
+(N'Sao Hạng A', N'HIEUTHUHAI, Dương Domic, Song Luân & JSOL', N'Pop', 'music/Sao_Hang_A.mp3', 
 	N'Rảnh không baby
 	Anh phi qua này
 	Em thèm đồ tây
@@ -2285,7 +2285,7 @@ VALUES
 	Sao hạng A A A​.', N'image/SaoHangA.jpg', 0),
 
 
-(N'The Fate of Ophelia', N'Taylor Swift', N'Pop', 'music/The Fate of Ophelia.mp3',
+(N'The Fate of Ophelia', N'Taylor Swift', N'Pop', 'music/The_Fate_of_Ophelia.mp3',
 	N'I heard you calling
 	On the megaphone
 	You wanna see me all alone
@@ -2367,19 +2367,19 @@ VALUES
 	Ophelia', N'image/TFOO.jpg', 0),
 
 
-(N'The Lofi Rain Night 3', N'Mr.Dia', N'Lo-fi và Chill-out', 'music/The Lofi Rain Night 3.mp3', N'Lời bài hát sẽ sớm được cập nhật...', N'image/TheLofiRainNight.jpg', 0),
+(N'The Lofi Rain Night 3', N'Mr.Dia', N'Lo-fi và Chill-out', 'music/The_Lofi_Rain_Night_3.mp3', N'Lời bài hát sẽ sớm được cập nhật...', N'image/TheLofiRainNight.jpg', 0),
 
 
-(N'The Lofi Rain Night 8', N'Mr.Dia', N'Lo-fi và Chill-out', 'music/The Lofi Rain Night 8.mp3', N'Lời bài hát sẽ sớm được cập nhật...', N'image/TheLofiRainNight.jpg', 0),
+(N'The Lofi Rain Night 8', N'Mr.Dia', N'Lo-fi và Chill-out', 'music/The_Lofi_Rain_Night_8.mp3', N'Lời bài hát sẽ sớm được cập nhật...', N'image/TheLofiRainNight.jpg', 0),
 
 
-(N'The Lofi Rain Night 9', N'Mr.Dia', N'Lo-fi và Chill-out', 'music/The Lofi Rain Night 9.mp3', N'Lời bài hát sẽ sớm được cập nhật...', N'image/TheLofiRainNight.jpg', 0),
+(N'The Lofi Rain Night 9', N'Mr.Dia', N'Lo-fi và Chill-out', 'music/The_Lofi_Rain_Night_9.mp3', N'Lời bài hát sẽ sớm được cập nhật...', N'image/TheLofiRainNight.jpg', 0),
 
 
-(N'THỨC', N'ANH TRAI "SAY HI", Vũ Cát Tường, Phạm Đình Thái Ngân, Hustlang Robber, Mason nguyen & Jey B', N'Pop', 'music/THỨC.mp3', N'Lời bài hát sẽ sớm được cập nhật...', N'image/TheLofiRainNight.jpg', 0),
+(N'THỨC', N'ANH TRAI "SAY HI", Vũ Cát Tường, Phạm Đình Thái Ngân, Hustlang Robber, Mason nguyen & Jey B', N'Pop', 'music/Thuc.mp3', N'Lời bài hát sẽ sớm được cập nhật...', N'image/TheLofiRainNight.jpg', 0),
 
 
-(N'Trà Và Cà Phê', N'Chi Xê', N'Pop', 'music/Trà Và Cà Phê.mp3', 
+(N'Trà Và Cà Phê', N'Chi Xê', N'Pop', 'music/Tra_Va_Ca_Phe.mp3', 
 	N'Nhẹ nhàng và êm ái,
 	lưng lượt thẳng chân mục phong thai
 	Người cười mượn tia nắng,
@@ -2437,7 +2437,7 @@ VALUES
 	Super solo, super solo, tea and coffee', N'image/TeaACoffe.jpg', 0),
 
 
-(N'Trời Nồm', N'LAMOON', N'Pop', 'music/Trời Nồm.mp3', 
+(N'Trời Nồm', N'LAMOON', N'Pop', 'music/Troi_Nom.mp3', 
 	N'Mắt đựng trời nồm ẩm và ướt
 	Chẳng may ngã trượt kẻ tình si
 	Vết thương không to nhưng khó lành
@@ -2517,10 +2517,10 @@ VALUES
 	Cái xoa đầu rồi đơn phương
 	Tí tách tí tí tách rơi
 	Nước mắt nước mũi cứ rơi
-	Trời nồm làm em ướt mi', N'image/TeaACoffe.jpg', 0),
+	Trời nồm làm em ướt mi', N'image/lammon.jpg', 0),
 
 
-(N'TÂM SỰ VỚI ĐÊM MỘT MÌNH', N'Phùng Khánh Linh', N'Alternative', 'music/TÂM SỰ VỚI ĐÊM MỘT MÌNH.mp3', 
+(N'TÂM SỰ VỚI ĐÊM MỘT MÌNH', N'Phùng Khánh Linh', N'Alternative', 'music/Tam_Sư_Voi_Dem_Mot_Minh.mp3', 
 	N'Bữa tối nay em vào bếp nấu ăn
 	Trong lặng lẽ nghe nhạc
 	Quên đi ngày dài
@@ -2580,7 +2580,7 @@ VALUES
 	Ohmm Ohmh Ohmm make me cry', N'image/TamSuVoiDemMotMinh.jpg', 0),
 
 
-(N'Từng Ngày Yêu Em', N'buitruonglinh', N'Pop', 'music/Từng Ngày Yêu Em.mp3', 
+(N'Từng Ngày Yêu Em', N'buitruonglinh', N'Pop', 'music/Tung_Ngay_Yeu_Em.mp3', 
 	N'Lại chìm trong đôi mắt em xoe tròn
 	ngất ngây phút giây khi mà anh khẽ nhìn sang
 	Lại làm đôi môi nhớ em lại muốn hôn em thêm bao lần
@@ -2652,7 +2652,7 @@ VALUES
 	yêu mình em một đời', N'image/GT.jpg', 0),
 
 
-(N'Vũ Trụ Có Anh', N'Phương Mỹ Chi & DTAP', N'Pop', 'music/Vũ Trụ Có Anh.mp3', 
+(N'Vũ Trụ Có Anh', N'Phương Mỹ Chi & DTAP', N'Pop', 'music/Vu_Tru_Co_Anh.mp3', 
 	N'Nô nức đông vui, vua mở hội trên kinh đô
 	Nhung gấm xinh tươi, người ta đang hân hoan cùng dạo phố
 	Xe pháo như nêm, nhưng chỉ mình em không vui
@@ -2721,7 +2721,7 @@ VALUES
 	Là dù bên Đông, hay là bên Tây, người dù ở đâu khiến em đau lòng', N'image/VuTruCoAnh.jpg', 0),
 
 
-(N'Ôm Em Thật Lâu', N'MONO', N'Pop', 'music/Ôm Em Thật Lâu.mp3', 
+(N'Ôm Em Thật Lâu', N'MONO', N'Pop', 'music/Om_Em_That_Lau.mp3', 
 	N'Em lần cuối chúng ta gặp nhau
 	Hoa rơi ở bên thềm
 	Mây nhẹ trôi lướt êm đềm
@@ -2797,7 +2797,7 @@ VALUES
 	Chỉ muốn ôm', N'image/OmEmThatLau.jpg', 0),
 
 
-(N'Điều Khiến Anh Đau Lòng Nhất', N'Hazel', N'Hip-Hop/Rap', 'music/Điều Khiến Anh Đau Lòng Nhất.mp3', 
+(N'Điều Khiến Anh Đau Lòng Nhất', N'Hazel', N'Hip-Hop/Rap', 'music/Dieu_Khien_Em_Dau_Long_Nhat.mp3', 
 	N'Ai biết mai này đôi bàn tay xa nhau
 	Xơ xác vai gầy nơi tình yêu úa màu
 	Những vết thương lòng
@@ -2928,4 +2928,5 @@ VALUES
 	哪怕騙騙我也可以', N'image/1736929945372_300.jpg', 0)
 
 ;
+
 
