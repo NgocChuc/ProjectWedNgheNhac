@@ -15,15 +15,23 @@ import Dao.ArtistDAO;
 import Dao.SongDAO;
 import Model_Layer.Song;
 
-@WebServlet({"/home", "/index"})
+@WebServlet("/home")
 public class HomeServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+
+        System.out.println(">>> HomeServlet CALLED <<<");
+
         SongDAO dao = new SongDAO();
         List<Song> randomList = dao.getRandomSongs(6);
-        req.setAttribute("listRandom", randomList);
-        req.getRequestDispatcher("/index.jsp").forward(req, resp);
+
+        System.out.println(">>> Random songs size = " + randomList.size());
+
+        req.setAttribute("songs", randomList);
+
+        req.getRequestDispatcher("/views/home.jsp").forward(req, resp);
     }
 }
+
