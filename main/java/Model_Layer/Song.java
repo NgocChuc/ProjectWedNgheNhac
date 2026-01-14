@@ -6,22 +6,20 @@ public class Song {
 	private String artist;
 	private String genre;
 	private String filename;
-	private String mvLink;
 	private String lyrics;
 	private String coverImage;
 	private int views;
 	
 	public Song() { }
-	
-	public Song(int id, String title, String artist, String genre, String filename, String mvLink, String lyrics,
-			String coverImage, int views) {
+
+	public Song(int id, String title, String artist, String genre, String filename, String lyrics, String coverImage,
+			int views) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.artist = artist;
 		this.genre = genre;
 		this.filename = filename;
-		this.mvLink = mvLink;
 		this.lyrics = lyrics;
 		this.coverImage = coverImage;
 		this.views = views;
@@ -67,14 +65,6 @@ public class Song {
 		this.filename = filename;
 	}
 
-	public String getMvLink() {
-		return mvLink;
-	}
-
-	public void setMvLink(String mvLink) {
-		this.mvLink = mvLink;
-	}
-
 	public String getLyrics() {
 		return lyrics;
 	}
@@ -99,6 +89,4 @@ public class Song {
 		this.views = views;
 	}
 	
-	
-
 }
