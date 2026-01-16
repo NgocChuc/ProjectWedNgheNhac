@@ -10,43 +10,27 @@ import javax.servlet.http.HttpServletResponse;
 
 import Dao.PlaylistDAO;
 
-
-
-@WebServlet("/add-to-playlist")
+@WebServlet("/api/add-to-playlist")
 public class AddToPlaylistServlet extends HttpServlet {
-    
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         
-        // 1. Lấy dữ liệu từ JSP gửi lên
-        String sIdRaw = request.getParameter("songId");
-        String pIdRaw = request.getParameter("playlistId");
+        int songId = Integer.parseInt(request.getParameter("songId"));
+        int playlistId = Integer.parseInt(request.getParameter("playlistId"));
         
-        // Giả sử user đang đăng nhập và muốn thêm vào playlist "Yêu thích" của họ
-        // Nếu chưa có hệ thống login phức tạp, ta tạm fix cứng playlistId = 1 để test
-        if (pIdRaw == null) pIdRaw = "1"; 
-
-        try {
-            int songId = Integer.parseInt(sIdRaw);
-            int playlistId = Integer.parseInt(pIdRaw);
-
-            // 2. Gọi DAO
-            PlaylistDAO dao = new PlaylistDAO();
+        PlaylistDAO dao = new PlaylistDAO();
+        
+        // 1. Kiểm tra xem bài hát đã có trong playlist chưa
+        if (dao.isSongInPlaylist(playlistId, songId)) {
+            response.getWriter().write("exists");
+        } else {
+            // 2. Thêm vào database
             boolean success = dao.addSongToPlaylist(playlistId, songId);
-
-            // 3. Trả về kết quả cho Javascript (AJAX)
-            response.setContentType("text/plain");
-            response.setCharacterEncoding("UTF-8");
-            
             if (success) {
                 response.getWriter().write("success");
             } else {
-                response.getWriter().write("fail"); // Có thể do trùng bài hát
+                response.getWriter().write("error");
             }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            response.getWriter().write("error");
         }
     }
 }
