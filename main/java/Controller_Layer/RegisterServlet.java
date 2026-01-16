@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import Model_Layer.*;
+import Dao.UserDao;
 
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
@@ -52,7 +53,7 @@ public class RegisterServlet extends HttpServlet {
         }
 
         if (hasError) {
-            request.getRequestDispatcher("/register.jsp").forward(request, response);
+            request.getRequestDispatcher("/assets/views/auth/register.jsp").forward(request, response);
             return;
         }
 
@@ -60,12 +61,12 @@ public class RegisterServlet extends HttpServlet {
         dao.registerUser(new User(username, email, password));
 
         request.setAttribute("success", "Register successful! You can login now.");
-        request.getRequestDispatcher("/login.jsp").forward(request, response);
+        request.getRequestDispatcher("/assets/views/auth/login.jsp").forward(request, response);
     }
 
   
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("/register.jsp").forward(request, response);
+        request.getRequestDispatcher("/assets/views/auth/register.jsp").forward(request, response);
     }
 }
