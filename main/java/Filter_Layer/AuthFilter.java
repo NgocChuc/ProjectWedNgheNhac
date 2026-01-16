@@ -4,6 +4,7 @@ import java.io.IOException;
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.*;
+import Model_Layer.User;
 
 @WebFilter("/*")
 public class AuthFilter implements Filter {
@@ -21,30 +22,38 @@ public class AuthFilter implements Filter {
         HttpSession session = request.getSession(false);
         boolean loggedIn = (session != null && session.getAttribute("user") != null);
 
-        // Các URL public
-        boolean isPublic = path.startsWith(contextPath + "/login") ||
-                           path.startsWith(contextPath + "/register") ||
-                           path.contains("/css/") ||
-                           path.contains("/js/") ||
-                           path.contains("/images/");
-        					path.startsWith(contextPath + "/JSP/login.jsp");
+        // Pages that require login
+        boolean isRequiredAuth = path.startsWith(contextPath + "/download") ||
+                                 path.startsWith(contextPath + "/add-to-playlist") ||
+                                 path.startsWith(contextPath + "/profile");
+
+        // Login/Register pages
+        boolean isAuthPage = path.startsWith(contextPath + "/login") ||
+                             path.startsWith(contextPath + "/register") ||
+                             path.contains("login.jsp");
 
         if (loggedIn) {
-            // Nếu đã login, truy cập login/register → redirect về home
-            if (path.startsWith(contextPath + "/login") || path.startsWith(contextPath + "/register")) {
-                response.sendRedirect(contextPath + "/home");
+            // Already logged in, prevent going back to login/register
+            if (isAuthPage) {
+                User user = (User) session.getAttribute("user");
+                String role = (user.getRole() != null) ? user.getRole().trim().toLowerCase() : "";
+                
+                if ("admin".equals(role)) {
+                    response.sendRedirect(contextPath + "/admin/dashboard-data");
+                } else {
+                    response.sendRedirect(contextPath + "/home");
+                }
                 return;
             }
         } else {
-            // Chưa login và truy cập trang private → forward login
-            if (!isPublic) {
-                request.getRequestDispatcher("/JSP/login.jsp").forward(request, response);
+            // Not logged in, trying to access protected pages
+            if (isRequiredAuth) {
+                response.sendRedirect(contextPath + "/login");
                 return;
             }
         }
 
-        // Cho phép truy cập trang public hoặc user đã login
+        // Allow all other requests
         chain.doFilter(req, res);
     }
 }
-
